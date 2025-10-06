@@ -2,8 +2,6 @@
 
 Welcome to the eCommerce Platform Project built using the MERN (MongoDB, Express.js, React, Node.js) Stack. This project provides a robust and full-featured online shopping platform with various functionalities to enhance the user experience.
 
-**Live App Demo** : [https://stackmart.onrender.com/](https://stackmart.onrender.com/)</br>
-Note: Please be aware that Render's free tier will automatically shut down after 15 minutes of inactivity. Consequently, the first request after reactivation may experience a delay, but subsequent requests will be faster.
 
 ## Features
 
@@ -34,9 +32,6 @@ Note: Please be aware that Render's free tier will automatically shut down after
 git clone https://github.com/your-username/MERN-eCommerce.git
 ```
 
-```bash
-cd MERN-eCommerce
-```
 
 3. Create a MongoDB database and obtain your MongoDB URI from [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
 4. Set up your preferred payment gateway (Stripe, PayPal, etc.) and obtain the required API keys.
