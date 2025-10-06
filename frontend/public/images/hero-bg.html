@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Hero Background Image</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  width: 1920px;
+  height: 1080px;
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.dots {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.text {
+  font-family: Arial, sans-serif;
+  font-size: 64px;
+  font-weight: bold;
+  color: rgba(255, 136, 0, 0.7);
+  text-align: center;
+}
+</style>
+</head>
+<body>
+  <div class="dots"></div>
+  <div class="text">STACKMART</div>
+</body>
+</html>

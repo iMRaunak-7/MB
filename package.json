@@ -1,0 +1,42 @@
+{
+  "name": "stackmart",
+  "version": "1.0.0",
+  "description": "Stackmart - A full-featured eCommerce web application.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "start:safe": "bash backend/start-server.sh",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "dev:safe": "concurrently \"npm run start:safe\" \"npm run client\"",
+    "data:import": "node backend/seeder.js",
+    "data:destroy": "node backend/seeder.js -d",
+    "db:check": "node -e \"const mongoose = require('mongoose'); mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/stackmart').then(() => { console.log('MongoDB connection successful'); process.exit(0); }).catch(err => { console.error('MongoDB connection failed:', err); process.exit(1); });\"",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "kill-ports": "npx kill-port 5000 5001 3000"
+  },
+  "author": "Ajay Boro",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "colors": "^1.4.0",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.20.0",
+    "mongoose": "^8.0.3",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.8",
+    "stripe": "^19.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.1.10"
+  }
+}

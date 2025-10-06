@@ -1,0 +1,169 @@
+/* Hero Section Styles - Simple Version */
+
+.hero-section {
+  background: linear-gradient(135deg, #f5f7fa 0%, #eef2f7 100%);
+  padding: 4rem 0;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  color: #333;
+  border-bottom: 3px solid #ff8800;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Enhanced hero section with decorative elements */
+
+.hero-section:before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgba(255, 136, 0, 0.1);
+  z-index: 0;
+}
+
+.hero-section:after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: rgba(255, 136, 0, 0.05);
+  z-index: 0;
+}
+
+.hero-content {
+  padding: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-weight: 800;
+  font-size: 3.5rem;
+  margin-bottom: 1.2rem;
+  color: #212529;
+  position: relative;
+  display: inline-block;
+}
+
+.hero-title:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background-color: #ff8800;
+  border-radius: 2px;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  color: #495057;
+  line-height: 1.7;
+  max-width: 90%;
+}
+
+/* Hero image styling */
+.hero-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+}
+
+/* Feature items in hero section */
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 1.8rem;
+  color: #ff8800;
+  margin-bottom: 8px;
+}
+
+.feature-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #343a40;
+}
+
+/* Discount badge removed as requested */
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: perspective(1000px) rotateY(-5deg);
+  transition: transform 0.5s ease;
+}
+
+.hero-image:hover {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-title:after {
+    width: 60px;
+    height: 3px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    max-width: 100%;
+  }
+  
+  .hero-section {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-section {
+    padding: 2rem 0;
+  }
+  
+  .hero-content {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,38 @@
+import React from 'react';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { FaSearch } from 'react-icons/fa';
+
+const SearchBox = ({ history }) => {
+  const [keyword, setKeyword] = React.useState('');
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    if (keyword.trim()) {
+      history.push(`/search/${keyword}`);
+    } else {
+      history.push('/');
+    }
+  };
+
+  return (
+    <Form onSubmit={submitHandler} className="d-flex">
+      <Form.Control
+        type='text'
+        name='q'
+        onChange={(e) => setKeyword(e.target.value)}
+        placeholder='Search products...'
+        className='mr-sm-2 ml-sm-5'
+        style={{
+          borderRadius: '50px',
+          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+          color: 'white',
+          borderColor: 'rgba(255, 255, 255, 0.2)',
+          paddingLeft: '2.5rem',
+          width: '200px'
+        }}
+      ></Form.Control>
+    </Form>
+  );
+};
+
+export default SearchBox;

@@ -1,0 +1,42 @@
+/* Fallback CSS for hero background */
+
+.hero-section {
+  /* Make sure we have a default background even if images fail */
+  background-color: #343a40 !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(135deg, rgba(33, 37, 41, 0.97) 0%, rgba(58, 63, 68, 0.97) 100%),
+    repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(100, 120, 140, 0.05) 10px, rgba(100, 120, 140, 0.05) 20px);
+  z-index: 0;
+}
+
+.hero-section.hero-fallback::after {
+  content: "STACKMART";
+  position: absolute;
+  font-size: 120px;
+  font-weight: bold;
+  opacity: 0.1;
+  color: #64788c;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}

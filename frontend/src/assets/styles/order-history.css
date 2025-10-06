@@ -1,0 +1,42 @@
+/* Order history page specific styles */
+.order-history-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.new-order {
+  animation: highlight-row 2s ease-in-out;
+}
+
+/* Spin animation for refresh icon */
+.spin-animation {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes highlight-row {
+  0% {
+    background-color: rgba(255, 193, 7, 0.3);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .order-history .table-sm td, 
+  .order-history .table-sm th {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+}
